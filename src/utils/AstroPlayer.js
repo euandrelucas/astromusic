@@ -44,7 +44,6 @@ client.player.on('noResults', (message, query) =>
 message.channel.send(`<:dlz_error:795203031388913687>  ›  No results found on YouTube for \`${query}\`!`)
 )
 
-// Send a message when the music is stopped
 client.player.on('queueEnd', (message, queue) => 
 message.channel.send('<:dlz_error:795203031388913687>  ›  Music stopped as there is no more music in the queue!')
 )
