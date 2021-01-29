@@ -17,10 +17,11 @@ message.channel.send(`▶️  ›  \`${playlist.title}\` has been added to the q
 client.player.on('searchResults', (message, query, tracks) => {
 
     const embed = new Discord.MessageEmbed()
-    .setAuthor(`🔍  ›  Here are your search results for ${query}!`)
-    .setDescription(tracks.map((t, i) => `${eval(i + 1)}. ${t.title}`))
+    .setTitle(`🔍  ›  Here are your search results for ${query}!`)
+    .setDescription(tracks.map((t, i) => `**${eval(i + 1)}・**${t.title}`))
     .setFooter('Send the number of the song you want to play!')
     .setColor('611EE8')
+    .setThumbnail(client.user.displayAvatarURL({dynamic:true}))
     message.channel.send(embed);
 
 })
