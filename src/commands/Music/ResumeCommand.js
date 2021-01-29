@@ -16,5 +16,6 @@ exports.run = async (client, message, args, prefix) => {
 exports.help = {
     name: 'resume',
     aliases: ['return'],
-    category: 'music'
+    category: 'music',
+    description: 'Resume the current music'
 }

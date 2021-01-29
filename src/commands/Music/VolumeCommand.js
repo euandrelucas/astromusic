@@ -18,5 +18,6 @@ exports.run = async (client, message, args, prefix) => {
 exports.help = {
     name: 'volume',
     aliases: ['setvol', 'vol'],
-    category: 'music'
+    category: 'music',
+    description: 'Change the volume music'
 }

@@ -9,7 +9,8 @@ exports.run = async (client, message, args, prefix) => {
 }
 
 exports.help = {
-    name: 'play',
-    aliases: ['tocar', 'start', 'p'],
-    category: 'music'
+    name: 'stop',
+    aliases: ['parar', 'end'],
+    category: 'music',
+    description: 'Stop the current music'
 }

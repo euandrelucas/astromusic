@@ -27,5 +27,6 @@ exports.run = async (client, message, args, prefix) => {
 exports.help = {
     name: 'botinfo',
     aliases: ['astroinfo', 'info', 'i'],
-    category: 'info'
+    category: 'info',
+    description: 'Shows bot information'
 }

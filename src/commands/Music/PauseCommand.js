@@ -16,5 +16,6 @@ exports.run = async (client, message, args, prefix) => {
 exports.help = {
     name: 'pause',
     aliases: ['await'],
-    category: 'music'
+    category: 'music',
+    description: 'Pause the current music'
 }

@@ -11,5 +11,6 @@ exports.run = async (client, message, args, prefix) => {
 exports.help = {
     name: 'play',
     aliases: ['tocar', 'start', 'p'],
-    category: 'music'
+    category: 'music',
+    description: 'Play a music'
 }

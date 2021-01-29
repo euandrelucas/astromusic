@@ -16,5 +16,6 @@ exports.run = async (client, message, args, prefix) => {
 exports.help = {
     name: 'skip',
     aliases: ['s', 'jump', 'next'],
-    category: 'music'
+    category: 'music',
+    description: 'Skip the current music'
 }
