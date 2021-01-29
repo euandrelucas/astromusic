@@ -1,3 +1,5 @@
+require('./functions/quote.js')
+const glob = require('glob')
 const c = require('colors')
 const fs = require('fs')
 
@@ -19,6 +21,27 @@ const client = new Discord.Client({
     disableMentions: 'everyone',
     shardCount: 1,
     token: config.token
+})
+
+client.commands = new Discord.Collection();
+client.aliases = new Discord.Collection();
+
+const { Player } = require("discord-player");
+
+const player = new Player(client);
+
+client.player = player;
+
+glob(__dirname+'/src/commands/*/*.js', function (er, files) {
+    if(er) console.log(er)
+    files.forEach(f => {
+        let props = require(`${f.replace('.js', '')}`)
+        client.commands.set(props.help.name, props);
+        props.help.aliases.forEach(alias => {
+        client.aliases.set(alias, props.help.name);
+        });
+        })
+    console.log("[COMANDOS] - Carregados com sucesso".brightCyan)
 })
 
 fs.readdir("./src/events/", (err, files) => {
