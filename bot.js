@@ -2,7 +2,7 @@ require('./functions/quote.js')
 const glob = require('glob')
 const c = require('colors')
 const fs = require('fs')
-
+/*
 const express = require('express');
 const app = express();
 app.get("/", (request, response) => {
@@ -13,7 +13,7 @@ app.get("/", (request, response) => {
 });
 
 app.listen(process.env.PORT);
-
+*/
 const Discord = require('discord.js')
 const config = require('./config.json')
 

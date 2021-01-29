@@ -19,7 +19,7 @@ client.player.on('searchResults', (message, query, tracks) => {
     const embed = new Discord.MessageEmbed()
     .setTitle(`🔍  ›  Here are your search results for ${query}!`)
     .setDescription(tracks.map((t, i) => `**${eval(i + 1)}・**${t.title}`))
-    .setFooter('Send the number of the song you want to play!')
+    .setFooter(`${client.user.username} | Send the number of the song you want to play!`, client.user.displayAvatarURL({dynamic:true}))
     .setColor('611EE8')
     .setThumbnail(client.user.displayAvatarURL({dynamic:true}))
     message.channel.send(embed);
