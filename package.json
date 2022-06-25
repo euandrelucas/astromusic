@@ -31,7 +31,7 @@
     "jsdoc-skyceil": "^1.0.6",
     "merge-options": "^3.0.4",
     "moment": "^2.29.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "os": "^0.1.1",
     "os-utils": "0.0.14",
     "soundcloud-scraper": "^4.0.3",
